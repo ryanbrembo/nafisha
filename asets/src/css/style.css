@@ -213,6 +213,11 @@ i {
     opacity: 1;
     transition: var(--transition);
 }
+.card.hidden {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: var(--transition);
+}
 
 .image {
 
