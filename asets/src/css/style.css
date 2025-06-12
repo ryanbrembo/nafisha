@@ -124,7 +124,7 @@ i {
     font-size: 3em;
     margin-bottom: 20px;
     animation: blink 3s infinite;
-    align-items: center;
+   
 }
 .scroll span {
     color: white;
@@ -142,7 +142,7 @@ i {
         opacity: 1;
     }
     50% {
-        opacity: 0.3;
+        opacity: 0.1;
     }
     100% {
         opacity: 1;
