@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: "Comic Neue", cursive;
+
+}
+
+:root {
+    --yellow: yellow;
+    --transition: all 0.5s ease-in-out;
+}
+.nav-mobile {
+    display: none;
+}
+header {
+    position: fixed;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: 60%;
+    border-radius: 20px;
+    top: 20px;
+    left: 20%;
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+}
+
+#navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* bisa kamu ganti */
+}
+
+.navlinks > .logo > h2 {
+    color: yellow;
+    padding: 5px;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.nav-items li:hover {
+    color: var(--yellow);
+}
+.social-media a,
+i {
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: 22px;
+    align-items: center;
+}
+
+/*-------------------------LANDING PAGE-------------------*/
+
+.landing-page {
+    height: 100vh;
+
+}
+
+.hero {
+    background: url("/asets/src/img/hero.JPG") no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+    height: 100%;
+    z-index: 1;
+}
+
+.container-title {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    filter: none;
+}
+
+.container-title .title h2 {
+    text-align: center;
+    font-size: calc(18px + 1vw);
+    color: var(--yellow);
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+}
+.container-title .title p {
+    color: white;
+    text-align: center;
+    font-size: calc(12px + 1vh);
+}
+.title span {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--yellow);
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+
+}
+.scroll i {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: blink 3s infinite;
+    align-items: center;
+}
+.scroll span {
+    color: white;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.hamburger {
+    display: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*-------------------------END LANDING PAGE-------------------*/
+
+/*----------GALERY-----*/
+
+.gallery {
+    z-index: 1;
+    background-color: #1C1C22;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+
+}
+
+.title-gallery {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    width: 60%;
+    border-radius: 20px;
+    margin-left: 20%;
+    margin-bottom: 2rem;
+    padding: 10px;
+}
+
+.title-gallery h2 {
+    text-align: center;
+    font-size: 1.8em;
+    padding: 10px;
+    color: var(--yellow);
+}
+.container-gallery {
+    background-color: rgba(255, 255, 255, 0.116);
+    box-shadow: 2px 2px 10px 2px rgba(255, 251, 7, 0.952);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 40px 20px;
+    width: 80%;
+    margin-left: 10%;
+    overflow: hidden;
+
+}
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+
+}
+
+.card {
+    transform: translateX(-50px);
+    cursor: pointer;
+    position: relative;
+    box-shadow: 20px rgb(0, 2,2);
+    opacity: 0;
+
+}
+.card.show {
+    transform: translateX(0);
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.image {
+
+    border-radius: 0 200px;
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    transition: var(--transition);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    max-width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+.overlay .text {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+
+}
+.card:hover .overlay {
+    height: 0;
+}
+.overlay:hover {
+    height: 0;
+
+}
+
+/*----------END GALERY-----*/
+
+/*-------------RACE-----------*/
+article {
+    height: 100vh;
+}
+
+/*-------------END RACE-----------*/
+
+/*-------------MOBILE---------*/
+@media (max-width: 600px) {
+    /*------------HERO-----------*/
+    header {
+        width: 100%;
+        left: 0;
+
+    }
+
+    #navbar.collapsed {
+        height: 250px;
+        transition: var(--transition);
+
+    }
+    #navbar.ex {
+        height: 250px;
+        transition: var(--transition);
+    }
+
+    #navbar.expands .nav-mobile li {
+        padding: 10px;
+    }
+    #navbar.collapsed .nav-mobile,
+    li {
+        display: block;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .nav-mobile li:hover {
+
+        color: var(--yellow);
+    }
+    header .navlinks {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px;
+    }
+    .nav-items,
+    .social-media {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .container-title .title h2 {
+        padding: 0 10px;
+    }
+    .container-title .title p {
+        text-align: center;
+        margin-top: 20px;
+        padding: 0 10px;
+        line-height: 1.5;
+
+    }
+
+    /*------------ END HERO-----------*/
+
+    .title-gallery {
+
+        background-color: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        width: 60%;
+        margin-left: 20%;
+        padding: 0;
+    }
+    .container-gallery {
+        width: 100%;
+        margin-left: 0;
+        overflow: hidden;
+
+    }
+    .card {
+        display: flex;
+        justify-content: center;
+    }
+    .image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0 20px;
+        border-radius: 0 100px;
+
+    }
+
+    .container-card {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .image:hover .overlay {
+        height: 100%;
+    }
+
+}
