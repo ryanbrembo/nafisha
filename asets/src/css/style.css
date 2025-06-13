@@ -4,12 +4,13 @@
     list-style-type: none;
     box-sizing: border-box;
     font-family: "Comic Neue", cursive;
-
+    scroll-behavior: smooth;
 }
 
 :root {
     --yellow: yellow;
     --transition: all 0.5s ease-in-out;
+    --font-title: 1.8em;
 }
 .nav-mobile {
     display: none;
@@ -175,7 +176,7 @@ i {
 
 .title-gallery h2 {
     text-align: center;
-    font-size: 1.8em;
+    font-size: var(--font-title);
     padding: 10px;
     color: var(--yellow);
 }
@@ -265,6 +266,12 @@ i {
 /*-------------RACE-----------*/
 article {
     height: 100vh;
+}
+
+.container-race h2 {
+    text-align: center;
+    font-size: var(--font-title);
+    
 }
 
 /*-------------END RACE-----------*/
