@@ -11,13 +11,14 @@
     --yellow: yellow;
     --transition: all 0.5s ease-in-out;
     --font-title: 1.8em;
+    --dark: #1C1C22;
 }
 .nav-mobile {
     display: none;
 }
 header {
     position: fixed;
-    padding: 15px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     width: 60%;
@@ -266,12 +267,50 @@ i {
 /*-------------RACE-----------*/
 article {
     height: 100vh;
+    padding: 10px;
+    background: var(--dark);
 }
 
 .container-race h2 {
     text-align: center;
     font-size: var(--font-title);
     
+}
+details {
+    padding: 20px;
+    
+}
+summary {
+    padding: 20px;
+    background: yellow;
+    color: var(--dark);
+    font-size: 1.4em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    border: 1px solid var(--yellow);
+    
+}
+thead th {
+    padding: 20px;
+    background-color: tomato;
+}
+tbody tr:nth-child(odd) {
+    background-color: white;
+    
+}
+tbody tr:nth-child(even) {
+    background-color: grey;
+    
+}
+tbody td {
+    
+    padding: 10px;
+    text-align: center;
 }
 
 /*-------------END RACE-----------*/
@@ -374,5 +413,12 @@ article {
     .image:hover .overlay {
         height: 100%;
     }
+
+    /*------------RACE----------*/
+    table {
+   
+    width: 100%;
+   
+}
 
 }
