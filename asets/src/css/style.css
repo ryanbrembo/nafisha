@@ -31,7 +31,7 @@ header {
 
 #navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.8);
-    /* bisa kamu ganti */
+    top: 0;
 }
 
 .navlinks > .logo > h2 {
@@ -266,7 +266,6 @@ i {
 
 /*-------------RACE-----------*/
 article {
-    height: 100vh;
     padding: 10px;
     background: var(--dark);
 }
