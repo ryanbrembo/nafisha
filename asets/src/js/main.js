@@ -73,13 +73,14 @@ document
 
         const navbar = document.getElementById('navbar');
 
-        if (navbar.classList.contains('collapsed')) {
-            navbar.classList.add('expands');
-            navbar.classList.remove('collapsed');
-            document.body.style.overflow = "auto";
-        } else {
-            navbar.classList.remove('expands');
+        if (navbar.classList.contains('expands')) {
             navbar.classList.add('collapsed');
+            navbar.classList.remove('expands');
+            document.body.style.overflow = "auto";
+            navbar.classList.remove('nav-mobile');
+        } else {
+            navbar.classList.remove('collapsed');
+            navbar.classList.add('expands');
             document.body.style.overflow = "hidden";
         }
 
