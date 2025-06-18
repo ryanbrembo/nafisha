@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
     font-family: "Comic Neue", cursive;
@@ -60,13 +61,15 @@ header {
     padding: 10px;
     font-size: 18px;
 }
+.nav-items a {
+    color: white;
+}
 
-.nav-items li:hover {
+.nav-items li a:hover {
     color: var(--yellow);
 }
-.social-media a,
+.instagram a,
 i {
-    text-decoration: none;
     color: var(--color-sun);
     font-size: 22px;
     align-items: center;
@@ -272,8 +275,9 @@ i {
 
 /*-------------RACE-----------*/
 article {
-    padding: 10px;
+    padding: 20px 10px;
     background: var(--color-stone);
+    
 }
 
 .container-race h2 {
@@ -330,7 +334,7 @@ tbody td {
 /*-------------FOOTER-----------*/
 
 .footer {
-    height: 35vh;
+    height: 40vh;
     background-color: var(--dark);
 }
 .container-social {
@@ -343,28 +347,38 @@ tbody td {
 
 .social-media {
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 .container-media {
     position: relative;
     top: 100px;
+    
 }
 
-.media {
-    display: flex;
-    gap: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-
-.media,h3,p {
+.container-media,h3,p {
     color: var(--color-sun);
 }
 
 
+.media a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+
+
 
 /*-------------END FOOTEr-----------*/
+
+
+
+
+
 
 /*-------------MOBILE---------*/
 @media (max-width: 600px) {
@@ -399,7 +413,7 @@ tbody td {
         animation-delay: 1s;
     }
     #navbar.expands .nav-mobile,
-    li {
+    li a {
         display: block;
         color: white;
         padding: 10px;
@@ -407,7 +421,7 @@ tbody td {
 
     }
 
-    .nav-mobile li:hover {
+    .nav-mobile li a:hover {
 
         color: var(--yellow);
     }
@@ -417,7 +431,7 @@ tbody td {
         margin: 0 10px;
     }
     .nav-items,
-    .social-media {
+    .instagram {
         display: none;
     }
 
@@ -486,5 +500,19 @@ tbody td {
         width: 100%;
 
     }
+
+    /*----------FOOTER------*/
+  
+    .footer {
+        height: 70vh;
+    }
+    .container-social {
+        margin-left: 0;
+    }
+    .container-media {
+    position: relative;
+    top: 50px;
+}
+
 
 }
