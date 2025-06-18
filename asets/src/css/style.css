@@ -373,7 +373,7 @@ tbody td {
 
 
 
-/*-------------END FOOTEr-----------*/
+/*-------------END FOOTER-----------*/
 
 
 
@@ -381,7 +381,7 @@ tbody td {
 
 
 /*-------------MOBILE---------*/
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     /*------------HERO-----------*/
     header {
         width: 100%;
@@ -503,9 +503,7 @@ tbody td {
 
     /*----------FOOTER------*/
   
-    .footer {
-        height: 70vh;
-    }
+    
     .container-social {
         margin-left: 0;
     }
@@ -515,4 +513,10 @@ tbody td {
 }
 
 
+}
+
+@media only screen and (max-width: 900px) {
+    .footer {
+         height: 70vh;
+    }
 }
