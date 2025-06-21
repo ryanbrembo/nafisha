@@ -244,6 +244,7 @@ i {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 10;
     -webkit-backdrop-filter: blur(10px);
      backdrop-filter: blur(10px);
     background-color: var(--blur);
