@@ -103,12 +103,35 @@ i {
     filter: none;
 }
 
+.fade-in-delay-1 {
+    animation: fadeIn 1.2s ease-in;
+}
+.fade-in-delay-2 {
+    animation: fadeIn 2s ease-in;
+}
+.fade-in-delay-3 {
+    animation: fadeIn 5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translatey(0);}
+}
+
+
+.fade-out-delay-1 {
+    animation: fadeOut 1.2s ease-out;
+}
+@keyframes fadeOut {
+    from {opacity: 0; transform: translateY(100px);}
+    to {opacity: 1; transform: translatey(0);}
+}
+
 .container-title .title h2 {
     text-align: center;
     font-size: calc(18px + 1vw);
     color: var(--shadow-yellow);
     margin-bottom: 20px;
-    transition: all 0.5s ease-in-out;
 }
 .container-title .title p {
     color: white;
@@ -351,7 +374,7 @@ tbody td {
 /*-------------FOOTER-----------*/
 
 footer {
-    height: 50dvh;
+    height: 50vh;
     background: var(--dark);
 }
 .container-social {
@@ -539,10 +562,10 @@ p {
 
 @media screen and (max-height: 900px) {
    footer {
-        height: 80vh;
+        height: 70vh;
         }
          .container-social {
-        height: 75vh;
+        height: 65vh;
 
     }
     

@@ -59,7 +59,7 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 }, {
-    threshold: 0.7 //ketika 70% dari layar card muncul
+    threshold: 0.6 //ketika 50% dari layar card muncul
 });
 
 cards.forEach(card => {
@@ -100,6 +100,14 @@ document
         */
     });
 
+
+let typed = new Typed('#name', {
+    strings: ["AR23Ezio Squad"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 2000,
+    loop: true,
+});
 
 
 
