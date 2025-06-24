@@ -296,8 +296,8 @@ i {
 /*----------END GALERY-----*/
 
 /*-------------RACE-----------*/
-article {
-    padding: 10px 10px;
+.history-race{
+    padding: 50px 10px;
     background: var(--color-stone);
 
 }
@@ -308,10 +308,8 @@ article {
     backdrop-filter: blur(10px);
     width: 60%;
     border-radius: 20px;
-    margin-left: 20%;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
     padding: 10px;
+    margin: 1.2rem 20%;
 }
 .title-article h2 {
     text-align: center;
