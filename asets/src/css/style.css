@@ -292,7 +292,7 @@ i {
 }
 
 .overlay:hover {
-    height: 0;
+    height: auto;
 }
 
 
