@@ -291,6 +291,10 @@ i {
     height: 0;
 }
 
+.overlay:hover {
+    height: 0;
+}
+
 
 /*----------END GALERY-----*/
 
