@@ -84,20 +84,7 @@ document
             document.body.style.overflow = "hidden";
         }
 
-/*
 
-        const hiden = document.querySelector('.collapsed');
-     
-        if (hiden.style.display === "none" || hiden.style.display ==="") {
-            hiden.style.display = "block";
-            document.body.style.overflow = "hidden";
-            
-        }  else {
-            hiden.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-         
-        */
     });
 
 
@@ -105,7 +92,7 @@ let typed = new Typed('#name', {
     strings: ["AR23Ezio Squad", "PushbikeCorner"],
     typeSpeed: 50,
     backSpeed: 30,
-    backDelay: 2000,
+    backDelay: 200,
     loop: true,
 });
 
