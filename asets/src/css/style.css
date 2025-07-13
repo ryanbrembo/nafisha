@@ -5,6 +5,7 @@
     list-style-type: none;
     box-sizing: border-box;
     font-family: "Comic Neue", cursive;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -384,6 +385,16 @@ tbody td {
 
     padding: 10px;
     text-align: center;
+}
+
+.table-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 2s var(--transition);
+}
+
+details[open] .table-wrapper {
+  max-height: 1000px; /* Pastikan cukup besar menampung semua konten */
 }
 
 /*-------------END RACE-----------*/

@@ -97,6 +97,22 @@ let typed = new Typed('#name', {
 });
 
 
+const allDetails = document.querySelectorAll('.event-details');
+
+allDetails.forEach(details => {
+  const wrapper = details.querySelector('.table-wrapper');
+
+  if (!wrapper) return;
+
+  details.addEventListener('toggle', () => {
+    if (details.open) {
+      wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+    } else {
+      wrapper.style.maxHeight = "0";
+    }
+  });
+});
+
 
 
     
