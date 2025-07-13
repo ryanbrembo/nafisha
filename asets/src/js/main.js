@@ -97,21 +97,20 @@ let typed = new Typed('#name', {
 });
 
 
-const allDetails = document.querySelectorAll('.event-details');
+document.querySelectorAll('.custom-details .summary').forEach(summary => {
+      summary.addEventListener('click', () => {
+        const container = summary.parentElement;
+        const wrapper = container.querySelector('.table-wrapper');
 
-allDetails.forEach(details => {
-  const wrapper = details.querySelector('.table-wrapper');
+        container.classList.toggle('active');
 
-  if (!wrapper) return;
-
-  details.addEventListener('toggle', () => {
-    if (details.open) {
-      wrapper.style.maxHeight = wrapper.scrollHeight + "px";
-    } else {
-      wrapper.style.maxHeight = "0";
-    }
-  });
-});
+        if (container.classList.contains('active')) {
+          wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+        } else {
+          wrapper.style.maxHeight = "0";
+        }
+      });
+    });
 
 
 

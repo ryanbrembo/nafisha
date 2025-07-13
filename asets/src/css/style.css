@@ -343,24 +343,8 @@ i {
     font-size: var(--font-title);
 
 }
-details {
-    padding: 20px;
-    width: 80%;
-    margin-left: 10%;
 
-}
-details.open {
-    transition: var(--transition);
-}
-summary {
-    padding: 20px;
-    background: var(--yellow);
-    color: var(--color-stone);
-    font-size: 1.4em;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -386,15 +370,32 @@ tbody td {
     padding: 10px;
     text-align: center;
 }
-
-.table-wrapper {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 2s var(--transition);
+.box-details {
+    margin: 0 10%;
+}
+.custom-details {
+    border-radius: 5px;
+    margin: 20px 0;
+    
+   
 }
 
-details[open] .table-wrapper {
-  max-height: 1000px; /* Pastikan cukup besar menampung semua konten */
+.summary {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--color-sun);
+    font-weight: bold;
+}
+
+.table-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+  
+}
+
+.custom-details.active .table-wrapper {
+    /* Ditentukan lewat JS */
 }
 
 /*-------------END RACE-----------*/
@@ -571,6 +572,9 @@ p {
         width: 100%;
 
     }
+    .box-details {
+    margin: 0 2%;
+}
 
     /*----------FOOTER------*/
 
