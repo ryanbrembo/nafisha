@@ -52,6 +52,25 @@ header {
 
 }
 
+.nav-link {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffda00; /* Yellow accent */
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
 .nav-items {
     display: flex;
     gap: 20px;
