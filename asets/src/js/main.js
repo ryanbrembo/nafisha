@@ -89,7 +89,7 @@ document
 
 
 let typed = new Typed('#name', {
-    strings: ["AR23Ezio Squad dan PushbikeCorner"],
+    strings: ["AR23Ezio dan PushbikeCorner"],
     typeSpeed: 50,
     backSpeed: 30,
     backDelay: 1000,
