@@ -251,6 +251,7 @@ i {
     justify-content: center;
     align-items: center;
     width: 100%;
+
     
     
 }
@@ -268,8 +269,26 @@ i {
 .about-left {
     display: flex;
     align-items: center;
+    transform: translateX(-50px);
     
 }
+
+.about-left.show-left {
+    transform: translateX(0);
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.about-left.hidden-left {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+
+
+
+
 .about-left img {
     height: 500px;
     border-radius: 10px;
@@ -281,6 +300,18 @@ i {
     height: 100%;
     transition: var(--transition);
     
+}
+
+.about-right.show-right {
+    transform: translateX(0);
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.about-right.hidden-right {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: var(--transition);
 }
 
 .paragraf {
