@@ -52,23 +52,24 @@ header {
 }
 
 .nav-link {
-            position: relative;
-            padding-bottom: 4px;
-            transition: color 0.3s ease-in-out;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #ffda00; /* Yellow accent */
-            transition: width 0.3s ease-in-out;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease-in-out;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffda00;
+    /* Yellow accent */
+    transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
 
 .nav-items {
     display: flex;
@@ -179,17 +180,30 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin: 40px 0;
     text-align: center;
 
 }
 .scroll i {
     font-size: 3em;
     margin-bottom: 20px;
-    animation: blink 3s infinite;
+    animation: bounce 1s infinite;
 
 }
-.scroll span {
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(-5px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translateY(20px);
+        animation-timing-function: ease-out;
+    }
+}
+
+.scroll p > span {
     color: white;
     font-weight: 400;
     font-style: normal;
@@ -213,6 +227,82 @@ i {
 }
 
 /*-------------------------END LANDING PAGE-------------------*/
+
+/*----------About Me-----*/
+
+.about-me {
+   
+    padding: 20px;
+    background-color: #1B1C22;
+
+}
+
+.title-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: var(--yellow);
+}
+.container-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    
+}
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 20px;
+    justify-content: center;
+   
+   
+   
+}
+
+.about-left {
+    display: flex;
+    align-items: center;
+    
+}
+.about-left img {
+    height: 500px;
+    border-radius: 10px;
+}
+
+.about-right {
+
+    width: 600px;
+    height: 100%;
+    transition: var(--transition);
+    
+}
+
+.paragraf {
+    padding: 10px 0;
+    display: flex;
+    
+
+}
+
+.paragraf p {
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 2;
+    color: white;
+    text-align: justify;
+    
+}
+.paragraf span {
+    color: var(--yellow);
+}
+
+/*----------END About Me-----*/
 
 /*----------GALERY-----*/
 
@@ -362,27 +452,24 @@ i {
 
 }
 
-
 table {
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid var(--color-sun);
+    border: 1px solid var(--yellow);
     margin-top: 20px;
 
 }
 thead th {
     padding: 20px;
     background-color: var(--color-stone);
-    color: var(--color-sun);
+    color: var(--yellow);
 }
-tbody tr:nth-child(odd) {
+tbody tr {
     background-color: white;
+    border-bottom: 1px solid rgba(121, 121, 121, 0.199);
 
 }
-tbody tr:nth-child(even) {
-    background-color: rgb(173, 173, 173);
 
-}
 tbody td {
 
     padding: 10px;
@@ -394,8 +481,7 @@ tbody td {
 .custom-details {
     border-radius: 5px;
     margin: 20px 0;
-    
-   
+
 }
 
 .summary {
@@ -403,13 +489,14 @@ tbody td {
     cursor: pointer;
     background-color: var(--yellow);
     font-weight: bold;
+
 }
 
 .table-wrapper {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.6s ease;
-  
+
 }
 
 .custom-details.active .table-wrapper {
@@ -446,8 +533,7 @@ footer {
 }
 
 .container-media,
-h3,
-p {
+a {
     color: var(--shadow-yellow);
 }
 
@@ -544,6 +630,30 @@ p {
 
     /*------------ END HERO-----------*/
 
+    /*------------ ABOUT-----------*/
+    .about-me {
+        height: auto;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+         transition: all .5s ease-in-out;
+    }
+
+    .about-left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-right {
+
+    width: 100%;
+   
+    
+}
+    
+    /*------------ END ABOUT-----------*/
+
     .title-gallery {
 
         background-color: var(--color-stone);
@@ -581,15 +691,15 @@ p {
     }
 
     /*------------RACE----------*/
-   
+
     table {
 
         width: 100%;
 
     }
     .box-details {
-    margin: 0 2%;
-}
+        margin: 0 2%;
+    }
 
     /*----------FOOTER------*/
 
@@ -616,4 +726,5 @@ p {
 
     }
 
+    
 }
