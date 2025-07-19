@@ -231,7 +231,7 @@ i {
 /*----------About Me-----*/
 
 .about-me {
-   
+    width: 100%;
     padding: 20px;
     background-color: #1B1C22;
 
@@ -258,8 +258,6 @@ i {
 .about {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px 0;
-    gap: 20px;
     justify-content: center;
    
    
@@ -286,9 +284,6 @@ i {
 }
 
 
-
-
-
 .about-left img {
     height: 500px;
     border-radius: 10px;
@@ -309,7 +304,7 @@ i {
 }
 
 .about-right.hidden-right {
-    transform: translateX(50px);
+    transform: translateX(15px);
     opacity: 0;
     transition: var(--transition);
 }
@@ -555,6 +550,7 @@ footer {
 .social-media {
     display: flex;
     flex-wrap: wrap;
+    height: auto;
     gap: 50px;
 }
 .container-media {
