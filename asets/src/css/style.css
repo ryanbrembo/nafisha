@@ -517,11 +517,7 @@ tbody td {
     font-weight: bold;
 }
 
-.summary:hover {
-   
-    background-color: #ffd60aa2;
-    
-}
+
 
 .table-wrapper {
     max-height: 0;
